@@ -1,11 +1,11 @@
 #!/bin/bash
 sleep 1
 
-cd /home/container
+cd /etc/nginx
 
 # Replace Startup Variables
 MODIFIED_STARTUP=`eval echo $(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')`
-echo ":/home/container$ ${MODIFIED_STARTUP}"
+echo ":/etc/nginx$ ${MODIFIED_STARTUP}"
 
 # Run the Server
 ${MODIFIED_STARTUP}

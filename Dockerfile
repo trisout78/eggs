@@ -5,9 +5,9 @@ RUN apk add php7 php7-fpm php7-mcrypt php7-soap php7-openssl php7-gmp php7-pdo_o
 
 USER root
 ENV  USER root
-ENV HOME /etc/nginx/
+ENV HOME /home/container
 
-WORKDIR /etc/nginx/
+WORKDIR /home/container
 
 COPY ./entrypoint.sh /entrypoint.sh
 
